@@ -2,32 +2,32 @@
 
 SQC trata-se de um Dashboard de previsão do tempo que tinha como foco a manipulação da DOM,  requisições assíncronas (Fetch API) e integração de bibliotecas externas para visualização de dados (gráficos).
 
-    Funcionalidades
+  **-Funcionalidades-**
 
-Buscar clima atual de qualquer cidade (via input ou geolocalização)
+  Buscar clima atual de qualquer cidade (via input ou geolocalização)
 
-Exibir informações como temperatura, umidade, velocidade do vento e condição climática.
+  Exibir informações como temperatura, umidade, velocidade do vento e condição climática.
 
-Mostrar a localização no mapa interativo Leaflet.
+  Mostrar a localização no mapa interativo Leaflet.
 
-Atualização dinâmica via JavaScript.
+  Atualização dinâmica via JavaScript.
 
-Ícones personalizados usando CDNJS.
+  Ícones personalizados usando CDNJS.
 
-Visual limpo e responsivo em HTML5 + CSS.
+  Visual limpo e responsivo em HTML5 + CSS.
 
 
-    Tecnologias Utilizadas
+   **-Tecnologias Utilizadas-**
 
-Linguagens:
+*Linguagens:*
 
-    JavaScript
+  -JavaScript
 
-    HTML5
+  -HTML5
 
-    CSS3
+  -CSS3
 
-APIs / Bibliotecas
+*APIs / Bibliotecas:*
 
 🌍 Leaflet.js – mapa interativo
 
@@ -36,7 +36,7 @@ APIs / Bibliotecas
 😀 CDNJS Cloudflare – emojis/ícones
 
 
-    Configuração da API
+  **-Configuração da API-**
 
 Crie uma conta gratuita em:
 https://openweathermap.org/api
@@ -45,7 +45,7 @@ Depois, substitua sua API KEY no arquivo JavaScript:
 
 const apiKey = "SUA_API_KEY_AQUI";
 
-    Desenvolvedor
+  **-Denvolvedor-**
 
 Este projeto foi desenvolvido por:
 
