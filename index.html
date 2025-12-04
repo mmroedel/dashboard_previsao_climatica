@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Será que chove?</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <!-- FontAwesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="logo da sera que chove?"></a>
+        </div>
+        <div class="titulo">
+            <a href="index.html"><p class="titulo">SERÁ QUE CHOVE?</p></a>
+        </div>
+        
+        <div class="btnTrocaTema">
+            <label class="trocarTema" for="checkbox">
+                <input type="checkbox" id="checkbox" onclick="trocarTema()">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <!-- Busca -->
+        <div class="buscarCidade">
+            <input type="text" id="cityInput" placeholder="Digite o nome da cidade (ex: Porto Alegre)...">
+            <button class="btn" onclick="buscarClima()">
+                <i class="fa-solid fa-magnifying-glass"></i> Buscar
+            </button>
+            <button class="btn btn-geo" onclick="buscarPorLocalizacao()">
+                <i class="fa-solid fa-location-crosshairs"></i> Minha Localização
+            </button>
+        </div>
+
+        <div id="loader" class="loader">
+            <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
+            <p>Carregando dados meteorológicos...</p>
+        </div>
+
+        <div id="errorMsg" style="color: red; text-align: center; margin-bottom: 20px;"></div>
+
+        <!-- Dashboard Grid (Inicialmente oculto) -->
+        <div class="dashboard-grid" id="dashboard">
+            
+            <!-- Card 1: Clima Atual -->
+            <div class="card">
+                <h3><i class="fa-solid fa-location-dot"></i> Agora</h3>
+                <div id="weatherResult" class="current-weather-content">
+                    <!-- Preenchido via JS -->
+                    <p>Busque uma cidade para ver os dados.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Mapa -->
+            <div class="card">
+                <h3><i class="fa-solid fa-map"></i> Radar / Mapa</h3>
+                <div id="map"></div>
+            </div>
+
+            <!-- Card 3: Previsão 5 Dias -->
+            <div class="card forecast-container">
+                <h3><i class="fa-solid fa-calendar-days"></i> Próximos 5 Dias</h3>
+                <div class="days-container" id="diasPrevisao">
+                    <!-- Preenchido via JS -->
+                </div>
+            </div>
+
+            <!-- Card 4: Gráfico -->
+            <div class="card forecast-container">
+                <h3><i class="fa-solid fa-chart-line"></i> Variação de Temperatura</h3>
+                <div class="chart-container">
+                    <canvas id="tempChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li>FAQ</li>
+                <li>Contato</li>
+                <li>Sobre nós</li>
+                <li>Direitos</li>
+                <li>Produzido por Murilo Röedel</li>
+            </ul>
+        </div>
+        <div class="footer-social-links">
+            <ul class="social-links">
+                <li><a href="http://www.linkedin.com/in/murilo-roedel-6700b8339?" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <hr>
+        <div class="copyright">
+            <p>&copy; 2025 SQC. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+</body>
+</html>
